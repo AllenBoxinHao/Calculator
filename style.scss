@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+  font-weight: normal;
+}
+
+body {
+  background: linear-gradient(
+    25deg,
+    rgba(192, 255, 254, 1) 0%,
+    rgba(222, 255, 184, 1) 100%
+  );
+}
+
+.calculator__grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+
+  button {
+    display: flex;
+    border: 1px solid white;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 2rem;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+  }
+  button:hover {
+    background-color: rgba(129, 129, 129, 0.377);
+  }
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  .previous__input {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+  }
+  .current__input {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 3rem;
+  }
+}
+
+.clear,
+.delete {
+  background-color: rgba(255, 56, 56, 0.75);
+}
+
+.operation {
+  background-color: rgba(214, 182, 2, 0.75);
+}
+
+.equals {
+  background-color: rgba(71, 120, 255, 0.75);
+}
+
+.numbers {
+  background-color: rgba(88, 88, 88, 0.75);
+}
